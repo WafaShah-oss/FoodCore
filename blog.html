@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F00D C0RE</title>
+    <link rel="shortcut icon" href="assets/egg-foo-young.png" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .custom-height{
+        height: 35px;
+        border-radius: 90px;
+        margin-top: 5px;
+    }
+    .custom-search{
+      height: 50px;
+    } 
+    .remove:hover{
+      background-color: rgba(255, 255, 255, 0);
+    }
+    .remove{
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+    .removed:hover{
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+     .removed{
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+    .recipe-button{
+      background-color: black;
+      border: 2px solid black;
+      color: #f2c646;
+      border-radius: 20px;
+    }
+    .recipe-button:hover{
+      background-color: #f2c646;
+      color: black;
+      border: 2px solid black;
+    }
+    .cross{
+      box-shadow: none;
+      background-color: aliceblue;
+    }
+    .cross:hover{
+      background-color: white;
+    }
+    .recipe-text{
+      padding-top: 100px;
+    }
+     h1 {
+      color: #c0392b;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #e67e22;
+    }
+    ul, ol,li{
+      list-style-position: inside;
+      padding-left: 0px;
+    }
+    .tag{
+      color: lightblue;
+    }
+   </style>
+<body>
+  <!-- nav bar -->
+    <section>
+        <header>
+       <nav class="navbar navbar-dark  navbar-expand-lg bg-dark fixed-top">
+      
+     <div class="container-fluid">
+      
+    <b> <a class="navbar-brand" href="#"><img src="assets/egg-foo-young.png" width="30px" height="30px"> F00d CORE</a></b>
+    <!-- toggle bar -->
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- sidebar -->
+    <div class=" sidebar offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FOODIES ARISE.</h5>
+
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!-- sidebar body -->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link  mx-2" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" aria-current="page" href="Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" aria-current="page" href="contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Payment in
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">DOLLARS</a></li>
+              <li><a class="dropdown-item" href="#">PAKISTANI RUPEES</a></li>
+               <li><a class="dropdown-item" href="#">POUNDS</a></li>
+              <li><a class="dropdown-item" href="#">RIYAL</a></li>
+               <li><a class="dropdown-item" href="#">INDIAN RUPEES</a></li>
+              <li><a class="dropdown-item" href="#">YEN</a></li>
+               <li><a class="dropdown-item" href="#">CANADIAN DOLLARS</a></li>
+              <li><a class="dropdown-item" href="#">WON</a></li>
+               <li><a class="dropdown-item" href="#">BAHT</a></li>
+              <li><a class="dropdown-item" href="#">EURO</a></li>
+               <li><a class="dropdown-item" href="#">RUBLE</a></li>
+              <li><a class="dropdown-item" href="#">AUSTRALIAN DOLLARS</a></li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">ASK A QUESTION?</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center">
+            <form class=" d-flex mt-3 d-block custom-search" role="search">
+          <input class="form-control me-2 w-100 mb-3" type="search" placeholder="Search for foods" aria-label="Search" />
+            </form>
+            <button type="button" class="btn btn-sm btn-warning custom-height position-relative p-2">
+              Cart
+            <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">
+             9+
+            <span class="visually-hidden">unread messages</span>
+            </span>
+            </button>
+            </div>
+        </div>  
+    </div>
+  </div>
+</nav>
+      </header>
+    </section>
+    <!-- carousel -->
+   <section>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active remove" aria-current="true" aria-label="Slide 1" ></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2" class="remove"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3" class="remove"></button>
+  </div>
+      <div class="carousel-inner">
+    <div class="carousel-item active c-item">
+      <img src="assets/strawberry.jpg" class="d-block w-100 c-img" alt="...">
+       <div class="carousel-caption top-0 mt-5">
+        <h5 class="mt-5 text-uppercase display-1 fw-bolder text-capitalized" style="color:aliceblue">F00d C0RE Present's</h5>
+        <p  class=" mt-3 fs-2 " style="color:rgb(250, 213, 6)">Hundreds of cooking tips</p>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/carousal.jpg" class="d-block w-100 c-img " alt="...">
+      <div class="carousel-caption  top-0 mt-5 ">
+        <h5 class="mt-5 text-uppercase display-1 fw-bolder text-capitalized" style="color: aliceblue;">Savor the Flavour</h5>
+        <p class="mt-3 fs-2 " style="color:  rgb(250, 213, 6);">Delicious Recipies and Cooking Tips</p>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/delicious-pizza-studio.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption ">
+        <h5 class="mt-5 text-uppercase display-1 fw-bolder text-capitalized"style="color: aliceblue;">Where Flavor Meets Passion </h5>
+        <p  class="mt-3 fs-2" style="color: rgb(250, 213, 6)">Explore Our World Of fooD</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev removed" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next remove" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </section>
+    <br>
+    <br>
+    <h4>Proceed for the best recipies</h4>
+    <!-- recipe headings  -->
+    <section>
+    <div class="carousel-inner">
+    <div class="carousel-item active c-item">
+      <img src="assets/BLOG.jpg" class="d-block w-100 c-img" alt="...">
+       <div class="carousel-caption top-0 mt-5">
+        <h5 class="mt-5 text-uppercase display-1 fw-bolder text-capitalized recipe-text" style="color:aliceblue">RECIPES</h5>
+        <button class="btn  recipe-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Here</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"  tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header bg-dark">
+    <h5 class="offcanvas-title " id="offcanvasScrollingLabel">Scroll down for more</h5>
+    
+    <button type="button" class="btn-close cross" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   
+  </div>
+  <div class="offcanvas-body bg-dark">
+     <hr style="color:seagreen">
+    <a href="#biryanirecipe" style="text-decoration: underline;">Chickhen Biryani</a>
+     <hr style="color:seagreen">
+     <a href="#tomatorecipe" style="text-decoration: underline;">Tomato Soup</a>
+     <hr style="color:seagreen">
+       <a href="#chickhenrecipe" style="text-decoration: underline;">Chickhen Soup</a>
+     <hr style="color:seagreen">
+     <a href="#pizzarecipe" style="text-decoration: underline;">Pizza</a>
+     <hr style="color:seagreen">
+     <a href="#saladrecipe" style="text-decoration: underline;">Italian Salad</a>
+     <hr style="color:seagreen">
+     <a href="#mexicanrecipe" style="text-decoration: underline;">Mexican Quivoa</a>
+     <hr style="color:seagreen">
+  </div>
+</div>
+      </div>
+    </div>
+    </div>
+    </section>
+    <!-- recipes -->
+     <section>
+      <!-- biryani recipe -->
+   <div class="carousel-inner" id="biryanirecipe">
+    <div class="carousel-item active ">
+      <img src="assets/biryanirecipe.jpg" class="d-block w-100 " alt="..." height="1000lvh">
+       <div class="carousel-caption top-0">
+       <h2>Biryani REcipe</h2>
+       <h3>Chickhen Biryani</h3>
+       <h4>Ingredients</h4>
+       <ul>
+        <li>500g basmati rice</li>
+        <li>500g Chickhen(cut into pieces)</li>
+        <li> 1 Cup yogurt</li>
+        <li> 2 onions (sliced)</li>
+        <li>2 tomatoes (chopped)</li>
+    <li>1 tbsp ginger garlic paste</li>
+    <li>Whole spices (cardamom, cloves, cinnamon)</li>
+    <li>1 tsp red chili powder</li>
+    <li>1/2 tsp turmeric powder</li>
+    
+  </ul>
+
+  <h4>Directions:</h4>
+  <ol>
+    <li>Boil rice till 70% cooked and set aside.</li>
+    <li>Fry onions until golden brown and remove half for garnishing.</li>
+    <li>Add ginger garlic paste to remaining onions and sauté.</li>
+    <li>Add chicken, tomatoes, spices, and cook until chicken is tender.</li>
+    <li>Layer rice and chicken mixture in a pot, top with fried onions</li>
+    <li>Cover and cook (dum) on low flame for 15-20 minutes. Serve hot </li>
+  </ol>
+    </div>
+    </div>
+    </div>
+    <!-- tomato soup -->
+    <div class="carousel-inner" id="tomatorecipe">
+    <div class="carousel-item active ">
+      <img src="assets/tomatoes.jpg" class="d-block w-100 " alt="..." height="1200lvh">
+       <div class="carousel-caption top-0 mt-5">
+       <h2>Soup REcipe</h2>
+       <h3> Tomato Soup</h3>
+       <h4>Ingredients</h4>
+       <ul>
+        <li>500g basmati rice</li>
+        <li>500g Chickhen(cut into pieces)</li>
+        <li> 1 Cup yogurt</li>
+        <li> 2 onions (sliced)</li>
+        <li>2 tomatoes (chopped)</li>
+    <li>1 tbsp ginger garlic paste</li>
+    <li>Whole spices (cardamom, cloves, cinnamon)</li>
+    <li>1 tsp red chili powder</li>
+    <li>1/2 tsp turmeric powder</li>
+    <li>Salt to taste</li>
+    <li>Fresh coriander and mint leaves</li>
+    <li>Oil or ghee</li>
+  </ul>
+
+  <h4>Directions:</h4>
+  <ol>
+    <li>Heat oil or butter in a pan and sauté onions and garlic until soft.</li>
+    <li>Add chopped tomatoes and cook until they break down.</li>
+    <li>Pour in the broth and bring to a boil. Simmer for 10-15 minutes.</li>
+    <li>Blend the mixture until smooth, then strain if needed.</li>
+    <li>Return to heat, season with salt, pepper, basil, and sugar.</li>
+    <li>Add cream or milk if using, and stir well.</li>
+    <li>Serve hot, garnished with croutons or herbs.</li>
+  </ol>
+    </div>
+    </div>
+    </div>
+    <!-- chickhen soup -->
+     <div class="carousel-inner" id="chickhenrecipe">
+    <div class="carousel-item active ">
+      <img src="assets/chickhensoup.jpg" class="d-block w-100 " alt="..." height="1000lvh">
+       <div class="carousel-caption top-0 mt-5">
+       <h2>Soup REcipe</h2>
+       <h3> Chickhen Soup</h3>
+       <h4>Ingredients</h4>
+       <ul>
+        <li>1 pound boneless, skinless chicken breast or thighs</li>
+<li>4 cups chicken broth</li>
+<li>1 medium onion, chopped</li>
+<li>2 cloves garlic, minced</li>
+<li>2 carrots, peeled and chopped</li>
+<li>2 celery stalks, chopped</li>
+<li>Salt and pepper, to taste</li>
+  </ul>
+
+  <h4>Directions:</h4>
+  <ol>
+    <li>In a large pot, sauté the chopped onion, garlic, carrots, and celery in a little bit of oil until tender.</li>
+<li>Add the chicken and chicken broth to the pot.</li>
+<li>Bring to a boil, then reduce heat and simmer until the chicken is cooked through.</li>
+<li>Season with salt and pepper to taste.</li>
+<li>Serve hot and enjoy!</li>
+  </ol>
+    </div>
+    </div>
+    </div>
+    <!-- pizza recipe -->
+     <div class="carousel-inner" id="pizzarecipe">
+    <div class="carousel-item active ">
+      <img src="assets/pizza.jpg" class="d-block w-100 " alt="..." height="1000lvh">
+       <div class="carousel-caption top-0 mt-5">
+       <h2>Pizza REcipe</h2>
+       <h3> Spicy Pizza</h3>
+       <h4>Ingredients</h4>
+       <ul>
+        <li>1 1/2 cups warm water</li>
+<li>2 teaspoons active dry yeast</li>
+<li>3 1/2 cups all-purpose flour</li>
+<li>1 teaspoon salt</li>
+<li>2 tablespoons olive oil</li>
+<li>1 cup pizza sauce</li>
+<li>2 cups shredded mozzarella cheese</li>
+<li>Toppings of your choice (e.g. pepperoni, mushrooms, bell peppers)</li>
+  </ul>
+
+  <h4>Directions:</h4>
+  <ol>
+    <li>Preheat oven to 425°F (220°C).</li>
+<li>Make the dough by combining warm water, yeast, flour, salt, and olive oil.</li>
+<li>Roll out the dough and spread pizza sauce over it.</li>
+<li>Add shredded mozzarella cheese and your desired toppings.</li>
+<li>Bake in the preheated oven for 15-20 minutes, or until crust is golden brown.</li>
+<li>Serve hot and enjoy!</li>
+  </ol>
+    </div>
+    </div>
+    </div>
+    <!-- italian salad -->
+     <div class="carousel-inner" id="saladrecipe">
+    <div class="carousel-item active ">
+      <img src="assets/salad.jpg" class="d-block w-100 " alt="..." height="1000lvh">
+       <div class="carousel-caption top-0 mt-5">
+       <h2>Salad REcipe</h2>
+       <h3> Italian Salad</h3>
+       <h4>Ingredients</h4>
+       <ul>
+        <li>4-6 cups mixed greens (lettuce, arugula, spinach)</li>
+<li>1 cup cherry tomatoes, halved</li>
+<li>1 cup sliced red onion</li>
+<li>1 cup sliced salami</li>
+<li>1 cup sliced pepperoni</li>
+<li>1/2 cup crumbled mozzarella cheese</li>
+<li>1/4 cup chopped fresh parsley</li>
+<li>Italian dressing, to taste</li>
+  </ul>
+
+  <h4>Directions:</h4>
+  <ol>
+    <li>In a large bowl, combine mixed greens, cherry tomatoes, sliced red onion, salami, pepperoni, and mozzarella cheese.</li>
+<li>Toss gently to combine.</li>
+<li>Sprinkle chopped parsley over the top.</li>
+<li>Drizzle with Italian dressing to taste.</li>
+<li>Serve immediately and enjoy!</li>
+  </ol>
+    </div>
+    </div>
+    </div>
+    <!-- Mexican food -->
+       <div class="carousel-inner" id="mexicanrecipe">
+    <div class="carousel-item active ">
+      <img src="assets/mexican.jpg" class="d-block w-100 " alt="..." height="1000lvh">
+       <div class="carousel-caption top-0 mt-5">
+       <h2>Mexican Food Recipe</h2>
+       <h3> Qninoa</h3>
+       <h4>Ingredients</h4>
+       <ul>
+       <li>1 cup quinoa, rinsed and drained</li>
+<li>2 cups water or vegetable broth</li>
+<li>1 tablespoon olive oil</li>
+<li>1 small onion, diced</li>
+<li>1 clove garlic, minced</li>
+<li>Salt and pepper, to taste</li>
+<li>Optional: herbs, spices, or vegetables of your choice</li>
+  </ul>
+
+  <h4>Directions:</h4>
+  <ol>
+   <li>Rinse quinoa in a fine mesh strainer and drain well.</li>
+<li>In a medium saucepan, heat olive oil over medium heat.</li>
+<li>Add diced onion and cook until translucent.</li>
+<li>Add garlic and cook for 1 minute.</li>
+<li>Add quinoa and water or broth to the saucepan.</li>
+<li>Bring to a boil, then reduce heat and simmer for 15-20 minutes or until quinoa is tender.</li>
+<li>Season with salt and pepper to taste.</li>
+<li>Serve hot and enjoy!</li>
+  </ol>
+    </div>
+    </div>
+    </div>
+   </section>
+   
+    
+    
+    <section>
+
+    </section>
+<footer class="footer">
+    <b><h2 class="Last-text" style="font-size: 30px;">Food Core</h2></b>
+    <div class="footer-container">
+    <div class="fotter-a">
+      <!-- phone nos email -->
+       <h4 class="Last-text">Contact US</h4>
+       <i class="fa-solid fa-phone-volume" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> +92345678910</span><br>
+       <i class="fa-solid fa-phone-volume" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> +92019876543</span> <br>
+       <i class="fa-solid fa-location-dot" style="margin-left: 12px; padding: 10px;"></i> <span style="padding-left: 5px;"> Karachi,Pakistan</span><br>
+       <i class="fa-solid fa-location-dot" style="margin-left: 12px; padding: 10px; "></i><span style="padding-left: 5px;"> LAhore,Pakistan</span><br>
+    </div>
+    <div class="foteer-a">
+    <!-- quick links contact us faqs trending offers file a complaint-->
+     <h4 class="Last-text">Quick Links</h4>
+     <i class="fa-solid fa-bell-concierge" style="margin-left: 12px; padding: 10px;"> </i> <span style="padding-left: 5px;"> Customer Service</span><br>
+     <i class="fa-solid fa-circle-question" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> FAQS</span> <br>
+     <i class="fa-solid fa-spinner" style="margin-left: 12px; padding: 10px;"></i> <span style="padding-left: 5px;"> Trending Offers</span><br>
+     <i class="fa-solid fa-scale-balanced" style="margin-left: 12px; padding: 10px;"></i> <span style="padding-left: 8px;"> Law Suit</span><br>
+     </div>
+    <div class="footer-a">
+    <!-- follow us fb insta twitter tiktok  -->
+     <h4 class="Last-text">Follow US</h4>
+     <i class="fa-brands fa-facebook-f" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> facebook</span><br>
+     <i class="fa-brands fa-instagram" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> Insta</span><br>
+     <i class="fa-brands fa-twitter" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> Twitter</span><br>
+     <i class="fa-brands fa-tiktok" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> Tiktok</span><br>
+     </div>
+    <div class="footer-a">
+      <!-- join our News letter subscribe to be a member email input subscribe button -->
+     
+      <h4 class="Last-text">Join Our <span>News Letter</span></h4>
+      <span  style="margin-left: 12px; padding: 10px;">Write Email Here!</span><br>
+      <input for="email" class="Footer-input"  style="margin-left: 12px; padding: 10px;"><br>
+      <button class="Footer-button"  style="margin-left: 12px; padding: 5px;">Subscribe</button>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <center>
+      <small>© 2025 Syeda Wafa shah.All rights reserved</small><br>
+      <h3 class="Last-text" style="font-size: medium;">Privacy Policy | Term's OF use | Children's Service</h3>
+      <small>WE're very grateful of each member that choose us. Enjoy!</small>
+    </div>
+     </center>
+     </div>
+    </footer>
+</body>
+</html>

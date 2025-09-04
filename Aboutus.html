@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F00D C0RE</title>
+    <link rel="shortcut icon" href="assets/egg-foo-young.png" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+ <style>
+    .custom-height{
+        height: 35px;
+        border-radius: 90px;
+        margin-top: 5px;
+    }
+    .custom-search{
+      height: 50px;
+    } 
+     .remove:hover{
+      background-color: rgba(255, 255, 255, 0);
+    }
+    .remove{
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+    .removed:hover{
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+     .removed{
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+     }
+     .secondclass{
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+     }
+     .secondchild{
+      width: 400px;
+      border: 2px solid darkolivegreen;
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-top: 10px;
+      box-shadow: 2px 2px 8px darkcyan;
+     }
+     .chefs{
+      font-size: 40px;
+      color: darkolivegreen;
+      text-shadow: 2px 2px 3px darkcyan;
+     }
+     .mainceo{
+      width: 100%;
+      border: 4px solid darkolivegreen;
+      box-shadow: 2px 2px 8px darkcyan;
+       
+    
+     }
+     .textceo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 450px;
+  width: 100%; height: 100%;
+  background-image: url('assets/business-woman-standing-with-crossed-arms.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: flex-end;
+   /* change as needed */
+  z-index: -1;
+   filter:brightness(0.5);
+}
+     .textceo{
+      background-color: white;
+      margin: 30px;
+      box-shadow: 1px 1px 60px rgb(120, 184, 120);
+       position: relative;
+       min-height: 100lvh;
+       padding: 2rem;
+       z-index: 1;
+      overflow: hidden;
+     }
+     .story{
+      border: 2px solid black;
+     }
+     .question{
+     background-color: white;
+     }
+   </style>
+<body>
+     <header>
+       <nav class="navbar navbar-dark  navbar-expand-lg bg-dark fixed-top">
+      
+     <div class="container-fluid">
+      
+    <b> <a class="navbar-brand" href="#"><img src="assets/egg-foo-young.png" width="30px" height="30px"> F00d CORE</a></b>
+    <!-- toggle bar -->
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- sidebar -->
+    <div class=" sidebar offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FOODIES ARISE.</h5>
+
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!-- sidebar body -->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link  mx-2" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" aria-current="page" href="Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" aria-current="page" href="contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Payment in
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">DOLLARS</a></li>
+              <li><a class="dropdown-item" href="#">PAKISTANI RUPEES</a></li>
+               <li><a class="dropdown-item" href="#">POUNDS</a></li>
+              <li><a class="dropdown-item" href="#">RIYAL</a></li>
+               <li><a class="dropdown-item" href="#">INDIAN RUPEES</a></li>
+              <li><a class="dropdown-item" href="#">YEN</a></li>
+               <li><a class="dropdown-item" href="#">CANADIAN DOLLARS</a></li>
+              <li><a class="dropdown-item" href="#">WON</a></li>
+               <li><a class="dropdown-item" href="#">BAHT</a></li>
+              <li><a class="dropdown-item" href="#">EURO</a></li>
+               <li><a class="dropdown-item" href="#">RUBLE</a></li>
+              <li><a class="dropdown-item" href="#">AUSTRALIAN DOLLARS</a></li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">ASK A QUESTION?</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center">
+            <form class=" d-flex mt-3 d-block custom-search" role="search">
+          <input class="form-control me-2 w-100 mb-3" type="search" placeholder="Search for foods" aria-label="Search" />
+            </form>
+            <button type="button" class="btn btn-sm btn-warning custom-height position-relative p-2">
+              Cart
+            <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">
+             9+
+            <span class="visually-hidden">unread messages</span>
+            </span>
+            </button>
+            </div>
+        </div>  
+    </div>
+  </div>
+</nav>
+      </header>
+    
+        <section>
+     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active remove" aria-current="true" aria-label="Slide 1" ></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2" class="remove"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3" class="remove"></button>
+  </div>
+      <div class="carousel-inner">
+    <div class="carousel-item active c-item">
+      <img src="assets/ceo.jpg" class="d-block w-100 c-img" alt="..." >
+       <div class="carousel-caption  ">
+       
+        <h2 class="mt-3 text-uppercase " style="color: white;"> Fatima Ali</h2>
+        <p class="mt-3" style="color: rgb(255, 255, 255);">Ce0 0f f00d C0re </p>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/chefs.jpg" class="d-block w-100 c-img " alt="...">
+      <div class="carousel-caption  ">
+        
+        
+        <h2 class="display-1 fw-bold c-text" style="color: black;">Our Main Chiefs</h2>
+        <p class="mt-3 c-text" style="color: white;">Meet Our Amazing Team</p>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="assets/food.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption ">
+        <h2 style="color:aliceblue;" class="display-1 fw-bold c-text">Where Flavor Meets Passion </h2>
+        <p>Explore Our World Of fooD</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev removed" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next remove" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </section>
+    <br>
+    <br>
+
+    <section>
+      <br>
+      <br>
+       <hr style="color: darkseagreen;">
+      <center>
+        <div class="mainceo">
+          
+          <div class="textceo">
+
+            <h3 style="font-size: 60px;">Fatima Ali</h3>
+            <h4 style="color: darkolivegreen;">The Founder Of Food Core</h4>
+            <i><span>This is MY ST0RY</span></i>
+            <br>
+            <p class="story"; style="color:rgb(120, 184, 120) ;">Fatima Ali, once a young girl with a passion for cooking and a dream bigger than her kitchen, started her journey by selling homemade meals from her small apartment. Despite countless rejections and financial setbacks, she remained unwavering. Her breakthrough came when she catered a local event that caught the attention of a food critic. With grit, late nights, and fearless innovation, she built her dream into reality — becoming the CEO of a renowned restaurant chain celebrated for its heartwarming dishes and empowering story. Today, Fatima Ali is not just a name in the culinary world, but a symbol of perseverance, proving that with vision and courage, even the smallest flame can light up the world.
+            </p>
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+      <h3 class="chefs">Our chefs</h3>
+       <hr style="color: darkseagreen;">
+    <div class=" secondclass">
+      <div class="secondchild">
+      <img src="assets/rev(1).jpg" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">Anchal Kumar</span><br><small style="color: darkseagreen;">Expert in indian food</small><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">hey, i am Anchal kumar,i can bring life into ingrdients.
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">I love Woking at food Core.They're like my family members.
+      </h3>
+    </div>
+     <div class="secondchild">
+      <img src="assets/prem.jpg" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">Prem Kumar</span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+     </div>
+      <div class="secondchild">
+      <img src="assets/muzamil.jpg" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">it's_Muzamil </span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+    </div>
+     <div class="secondchild">
+      <img src="assets/rev(1).jpg" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">premika_123</span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+     </div>
+     <div class="secondchild">
+      <img src="assets/profile-picture.png" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">Samaira_korejo</span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+    </div>
+     <div class="secondchild">
+      <img src="assets/profile-picture.png" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">Princess_Abiha</span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+    
+     
+    </div>
+     <div class="secondchild">
+      <img src="assets/rev(1).jpg" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">Princess_Abiha</span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+     </div>
+      <div class="secondchild">
+      <img src="assets/res (1).jpg" width="50px" height="50px" style="border-radius: 300px;">
+      <span style="color: darkseagreen;">Princess_Abiha</span><br><hr style="color: darkseagreen;">
+      <h6>Ratings:-</h6>
+      <span >🌟🌟🌟🌟🌟</span> 
+      <hr style="color: darkseagreen;">
+      <h3 style="color: darkseagreen; font-size: small;">They offer wide variety of foods ,delievery charges are affordable 10/10
+      </h3>
+      <h3 style="color: darkseagreen; font-size: small;">,delievery charges are affordable 10/10.overall service was good.
+      </h3>
+      </div>
+     </div>
+    </section>
+    </section>
+    <section class="qna">
+      <br>
+      <div class="question">
+      <h2>Queries</h2>
+      <div class="qnadiv"><b>What are The Restaurant's hour of operation?</b></div>
+      
+      <div class="qnatext"><small>Monday to Thursday 11am-10pm,Friday to Saturday 11am-11pm,Sunday 10am-9pm.</small></div>
+      <hr style="color:rgb(0, 0, 0)">
+      
+      <div class="qnadiv"><b>What are The Delivery's hour of operation?</b></div>
+      
+      <div class="qnatext"><small>Monday to Thursday 11am-10pm,Friday to Saturday 11am-11pm,Sunday 10am-9pm.</small></div>
+      <hr style="color:rgb(0, 0, 0)">
+      
+      <div class="qnadiv"><b>What are the kind of food you offer.</b></div>
+      
+      <div class="qnatext"><small>Italian,pakistani,indiaN,chinese.</small></div>
+      <hr style="color:rgb(0, 0, 0)">
+      
+      <div class="qnadiv"><b>How to donate?</b></div>
+      
+      <div class="qnatext"><small>Fill our Donation form.</small></div>
+      <hr style="color:rgb(0, 0, 0)">
+      </div>
+      </div>
+      </div>
+      </div>
+      <footer class="footer">
+    <b><h2 class="Last-text" style="font-size: 30px;">Food Core</h2></b>
+    <div class="footer-container">
+    <div class="fotter-a">
+      <!-- phone nos email -->
+       <h4 class="Last-text">Contact US</h4>
+       <i class="fa-solid fa-phone-volume" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> +92345678910</span><br>
+       <i class="fa-solid fa-phone-volume" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> +92019876543</span> <br>
+       <i class="fa-solid fa-location-dot" style="margin-left: 12px; padding: 10px;"></i> <span style="padding-left: 5px;"> Karachi,Pakistan</span><br>
+       <i class="fa-solid fa-location-dot" style="margin-left: 12px; padding: 10px; "></i><span style="padding-left: 5px;"> LAhore,Pakistan</span><br>
+    </div>
+    <div class="foteer-a">
+    <!-- quick links contact us faqs trending offers file a complaint-->
+     <h4 class="Last-text">Quick Links</h4>
+     <i class="fa-solid fa-bell-concierge" style="margin-left: 12px; padding: 10px;"> </i> <span style="padding-left: 5px;"> Customer Service</span><br>
+     <i class="fa-solid fa-circle-question" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> FAQS</span> <br>
+     <i class="fa-solid fa-spinner" style="margin-left: 12px; padding: 10px;"></i> <span style="padding-left: 5px;"> Trending Offers</span><br>
+     <i class="fa-solid fa-scale-balanced" style="margin-left: 12px; padding: 10px;"></i> <span style="padding-left: 8px;"> Law Suit</span><br>
+     </div>
+    <div class="footer-a">
+    <!-- follow us fb insta twitter tiktok  -->
+     <h4 class="Last-text">Follow US</h4>
+     <i class="fa-brands fa-facebook-f" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> facebook</span><br>
+     <i class="fa-brands fa-instagram" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> Insta</span><br>
+     <i class="fa-brands fa-twitter" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> Twitter</span><br>
+     <i class="fa-brands fa-tiktok" style="margin-left: 12px; padding: 10px;"></i><span style="padding-left: 5px;"> Tiktok</span><br>
+     </div>
+    <div class="footer-a">
+      <!-- join our News letter subscribe to be a member email input subscribe button -->
+     
+      <h4 class="Last-text">Join Our <span>News Letter</span></h4>
+      <span  style="margin-left: 12px; padding: 10px;">Write Email Here!</span><br>
+      <input for="email" class="Footer-input"  style="margin-left: 12px; padding: 10px;"><br>
+      <button class="Footer-button"  style="margin-left: 12px; padding: 5px;">Subscribe</button>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <center>
+      <small>© 2025 Syeda Wafa shah.All rights reserved</small><br>
+      <h3 class="Last-text" style="font-size: medium;">Privacy Policy | Term's OF use | Children's Service</h3>
+      <small>WE're very grateful of each member that choose us. Enjoy!</small>
+    </div>
+     </center>
+     </div>
+    
+    </section>
+</body>
+</html>
